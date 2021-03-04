@@ -10,4 +10,12 @@ describe Dice do
       expect(subject.roll_dice).to be_between(1, 6)
     end
   end
+  describe "amount_of_dice" do
+    it "rolls multiple dice" do
+      expect(subject).to respond_to :amount_of_dice
+    end
+    it "rolls three dice" do
+      expect(subject.amount_of_dice).to eq 3
+    end
+  end
 end
